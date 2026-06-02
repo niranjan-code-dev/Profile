@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Niranjan V Profile</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .profile-container {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            max-width: 750px;
+            width: 100%;
+            padding: 50px 40px;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .profile-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px auto;
+            font-size: 48px;
+            color: white;
+            font-weight: bold;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+            border: 3px solid rgba(255, 255, 255, 0.2);
+        }
+
+        h1 {
+            color: #ffffff;
+            font-size: 2.5em;
+            margin-bottom: 5px;
+            text-shadow: 0 2px 10px rgba(102, 126, 234, 0.5);
+        }
+
+        .tagline {
+            color: #a0a0c0;
+            font-size: 1em;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .divider {
+            height: 2px;
+            background: linear-gradient(to right, transparent, #667eea, #764ba2, transparent);
+            margin: 30px 0;
+            border: none;
+        }
+
+        .info-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .info-list li {
+            background: rgba(255, 255, 255, 0.04);
+            border-left: 4px solid #667eea;
+            padding: 18px 22px;
+            margin-bottom: 15px;
+            border-radius: 0 12px 12px 0;
+            color: #d0d0e8;
+            font-size: 1.05em;
+            line-height: 1.6;
+            transition: all 0.3s ease;
+        }
+
+        .info-list li:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-left-color: #764ba2;
+            transform: translateX(5px);
+        }
+
+        .info-list li:nth-child(2) {
+            border-left-color: #764ba2;
+        }
+
+        .info-list li:nth-child(3) {
+            border-left-color: #0077b5;
+        }
+
+        .info-list li:nth-child(4) {
+            border-left-color: #43e97b;
+        }
+
+        .info-list li:nth-child(2):hover {
+            border-left-color: #667eea;
+        }
+
+        .info-list li:nth-child(3):hover {
+            border-left-color: #764ba2;
+        }
+
+        .info-list li:nth-child(4):hover {
+            border-left-color: #764ba2;
+        }
+
+        .icon {
+            margin-right: 10px;
+            font-size: 1.2em;
+        }
+
+        .highlight {
+            color: #667eea;
+            font-weight: 600;
+        }
+
+        .contact-section {
+            background: rgba(255, 255, 255, 0.06);
+            border-radius: 15px;
+            padding: 25px 30px;
+            margin-top: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .contact-section h2 {
+            color: #ffffff;
+            font-size: 1.4em;
+            margin-bottom: 18px;
+            text-align: center;
+        }
+
+        .contact-details {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .contact-item {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.2), rgba(118, 75, 162, 0.2));
+            border: 1px solid rgba(102, 126, 234, 0.3);
+            padding: 14px 24px;
+            border-radius: 50px;
+            color: #c8c8e8;
+            font-size: 0.95em;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .contact-item:hover {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.4), rgba(118, 75, 162, 0.4));
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.3);
+        }
+
+        .contact-item span {
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        .skills-badges {
+            display: inline;
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(102, 126, 234, 0.2);
+            color: #a8b8ff;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            margin: 2px 2px;
+            border: 1px solid rgba(102, 126, 234, 0.3);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #505070;
+            font-size: 0.85em;
+        }
+
+        @media (max-width: 600px) {
+            .profile-container {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+
+            .info-list li {
+                padding: 14px 16px;
+                font-size: 0.95em;
+            }
+
+            .contact-details {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="profile-container">
+
+        <!-- Profile Header -->
+        <div class="profile-header">
+            <div class="avatar">NV</div>
+            <h1>Niranjan V</h1>
+            <p class="tagline">Profile</p>
+        </div>
+
+        <hr class="divider">
+
+        <!-- Information List -->
+        <ul class="info-list">
+            <li>
+                <span class="icon">🎓</span>
+                A <span class="highlight">BCA 3rd year</span> student with skills in 
+                <span class="badge">Python</span> 
+                <span class="badge">Excel</span> 
+                <span class="badge">SQL</span>
+            </li>
+
+            <li>
+                <span class="icon">📚</span>
+                Did online courses from <span class="highlight">IIT Bombay</span> and currently an intern at <span class="highlight">IIT Palakkad</span>.
+            </li>
+
+            <li>
+                <span class="icon">🔗</span>
+                Have a decent number of followers on <span class="highlight">LinkedIn</span>.
+            </li>
+
+            <li>
+                <span class="icon">💼</span>
+                Looking for <span class="highlight">Data Analyst</span> and <span class="highlight">Programmer</span> roles.
+            </li>
+        </ul>
+
+        <!-- Contact Section -->
+        <div class="contact-section">
+            <h2>📬 Contact Me</h2>
+            <div class="contact-details">
+                <a class="contact-item" href="tel:123984">
+                    📞 Phone: <span>123984</span>
+                </a>
+                <a class="contact-item" href="https://www.linkedin.com/in/Niranjan-code-dev" target="_blank">
+                    💼 LinkedIn: <span>Niranjan-code-dev</span>
+                </a>
+            </div>
+        </div>
+
+        <footer>
+            &copy; 2025 Niranjan V. All rights reserved.
+        </footer>
+
+    </div>
+
+</body>
+</html>
